@@ -49,7 +49,7 @@ namespace git_npm_proxy
             List<string> list = new List<string>();
             for (int i = 0; i < pathEnv.Length; i++)
             {
-                if (thisProcessPath != pathEnv[i] && (thisProcessPath + @"\") != pathEnv[i])
+                if (thisProcessPath != pathEnv[i] && (thisProcessPath + @"\") != pathEnv[i] && !pathEnv[i].Contains("npm-fix"))
                 {
                     list.Add(pathEnv[i]);
                 }
